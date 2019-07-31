@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文字闪烁</title>
+    <style>
+        .hightlight {
+            width: 500px;
+            margin: 100px auto;
+            font:700 20px/20px "Microsoft YaHei";
+            animation: 1s blink 3 steps(1) ;
+        }
+        @keyframes blink {
+            50% { color: transparent; }
+        }
+    </style>
+</head>
+<body>
+<div class="hightlight">hello lucas</div>
+</body>
+</html>
