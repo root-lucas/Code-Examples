@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多行文本溢出加点</title>
+    <style>
+        #box{
+            width: 320px;
+            text-overflow: 
+        }
+        /*单行文本溢出*/
+        .inaline{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        /*多行文本溢出*/
+        .intwoline{
+            display: -webkit-box !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:4;
+        }
+    </style>
+</head>
+<body>
+  <div id="box">
+    <h2 class="inaline">前端需要性能优化么？肯定是需要的</h2>
+    <p class="intwoline">性能优化一直以来都是前端工程领域中的一个重要部分。很多资料表明，网站应用的性能优化对于提高用户留存、转化率等都有积极影响。可以理解为，提升你的网站性能，就是提升你的业务数据（甚至是业务收入）。
+性能优化广义上包含前端优化和后端优化。后端优化的关注点更多的时候是在增加资源利用率、降低资源成本以及提高稳定性上。相较于后端，前端的性能优化会更直接与用户的体验挂钩。从用户体验侧来说，前端服务 5s 的加载时间优化缩减 80%(1s) 与后端服务 50ms 的响应优化缩减 80%(10ms) 相比，用户的体验提升会更大。因此很多时候，与体验相关的性能的瓶颈会出现在前端。</p>
+  </div>
+</body>
+</html>
