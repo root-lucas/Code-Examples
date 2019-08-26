@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>大风车</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+        .box {
+            width: 400px;
+            margin: 100px auto;
+        }
+        .box img {
+            width: 100%;
+            /*animate*/
+            /*我们用animation来指定使哪一个动画序列*/
+            animation: rotate 3s linear infinite;
+        }
+        /*有一个小问题*/
+        /*动画序列，指定一个动画该如何执行*/
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            100% {
+                transform: rotate(360deg) scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <img src="images/fengche.png">
+</div>
+</body>
+</html>
