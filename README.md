@@ -12,4 +12,5 @@
 
 [会呼吸的圆圈](https://root-lucas.github.io/Code-Examples/CSS3/会呼吸的圆圈.html)
 
+[发廊条](https://root-lucas.github.io/Code-Examples/CSS3/发廊条.html)
 
