@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js的ajax读取本地txt文件</title>
+</head>
+<body>
+<script>
+			function readTxt() {
+				var xhr = new XMLHttpRequest();
+				xhr.open("get", "read.txt", true);
+				xhr.send();
+				xhr.onreadystatechange = function() {
+					if(xhr.readyState == 4 && xhr.status == 200) {
+						console.log(xhr);
+						document.write(xhr.responseText);
+					} else if(xhr.status == 404) {
+						console.log(xhr.status);
+					}
+				};
+			}
+			readTxt()
+</script>
+</body>
+</html>

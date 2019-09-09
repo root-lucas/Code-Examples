@@ -1,0 +1,132 @@
+npm init
+npm install vue --save
+npm install vue-resource --save
+
+start node_modules(window系统) open node_modules(IOS系统)
+
+
+for(var i in this.products)     //循环data里的属性必须要加上this.
+
+
+this.count();    调用methods方法时需加上this.
+
+1、vue-resourse后台交互插件,貌似之后推荐用axios
+   	this.$http.get().then(function(res){})
+2、filter：多用于为获取的数据进行格式化，如19元
+3、mounted页面渲染完就做的事，不能保证el挂载完成，如要确保需使用this.$nextTick
+4、箭头函数作用域指向外层
+5、变量不在data不能进行监控，可以有两种方式
+   全局：Vue.set(item,"checked",true)
+   局部：vm.$set(item,"checked",true)
+
+6、computed：可用作分页
+
+=================================================================================
+es6箭头函数
+methods:{
+	cartView () {
+		var  _this=this;
+		this.$http.get('data/cartData.json',{"id":123})
+		.then(function(res){
+			_this.productList = res.body.result.list;
+			_this.totalMoney = res.body.result.totalMoney;	
+		})	
+   	 }
+}
+箭头函数好处不用再把this声明在外面了，then里面的作用域和外面的作用域都是同一个作用域
+
+		let  _this=this;    //这个也可以去掉了,如果使用箭头函数，以前的那种hack写法就不需要了
+		this.$http.get('data/cartData.json',{"id":123})
+		.then(res=>{
+			this.productList = res.body.result.list;
+			this.totalMoney = res.body.result.totalMoney;	
+		})	
+
+=================================================================================
+
+toFixed() 方法可把 Number 四舍五入后取指定小数位数的数字。
+66.888.toFixed(2)	//输出66.89
+
+全局过滤器是所有页面都可以使用的过滤器
+局部过滤器只有当前vue实例才能使用
+注:当全局过滤器和局部过滤器重名时，会采用局部过滤器。
+
+过滤器使用方法:{{ message | capitalize('arg1', arg2) }}    //capitalize 是格式化的名称也称过滤器函数
+
+arg1可以是任何字符串数字，如'元'
+
+<div class="item-price">{{item.productPrice | formatMoney}}</div>
+<span class="total-price">{{totalMoney | Money('元')}}</span>
+methods:{
+  filters: {
+    /*局部过滤器*/
+    formatMoney: function(value) {
+      // value指当前调用过滤器传过来的值
+      return "￥" + value.toFixed(2);
+    }
+}
+
+// 全局过滤器
+Vue.filter('Money',function(value,type) {
+        return "￥" + value.toFixed(2) + type;
+})
+
+①
+Vue.filter('capitalize', function (value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
+
+②
+filters: {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+}
+
+
+
+=================================================================================
+
+vue2.0版本用mounted代替ready，最好在mounted加上this.$nextTick(function(){this.方法})  一起搭配
+
+
+
+
+
+
+
+
+v-bind:class="{'md-show': delFlag}"    //控制类md-show显示隐藏，变量delFlag是true代表我们要删除
+v-bind即可以绑定src属性也可以绑定class
+
+
+@click="delFlag = false"   //click可以是表达式可以是方法
+
+<div class="addr-opration addr-del">      //编写类的命名方法，前面是要发生事件，中间横线，后面是操作步骤名
+<div class="addr-opration addr-edit">
+
+方法的命名是驼峰命名addAddress()，editAddress()
+
+点击每个模块选中（卡片列表循环单击选中效果）：
+<li v-for="(item,index) in filterAddress"  v-bind:class="{'check': index == currentIndex}" @click="currentIndex=index"> 
+ /*filterAddress计算属性的值可以放在for循环里面，充当数组*/
+//@click="currentIndex=index"标明了将点击的索引值赋给currentIndex，index == currentIndex自身的索引和当前点击事件索引相同，则产生选中事件
+/*当产生点击事件后，第一个currentIndex因为相等所以产生true，check类就可以渲染，v:bind和@click结合使用，会产生奇妙的状态！*/
+
+  computed: {
+    filterAddress: function() {
+      return this.addressList.slice(0, this.limitNum);
+    }
+  },
+
+v-for也可以接收computed的一个变量一个方法，函数数组
+
+/*标签指令中不要使用this.*/
+ <a class="addr-more-btn up-down-btn" href="javascript:" @click="this.limitNum==addressList.length">	 //error
+
+<li :class='{check:shippingMethod==2}' @click='shippingMethod=2'>     //check加不加单双引号都可以
+/*check必须是true才会设置类颜色，也就是说shippingMethod==2相等才会渲染check类*/
