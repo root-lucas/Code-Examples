@@ -16,6 +16,7 @@
 
 [大风车](https://root-lucas.github.io/Code-Examples/CSS3/大风车.html)
 
+[幻灯片](https://root-lucas.github.io/Code-Examples/CSS3/幻灯片.html)
 
 ## JS在线预览
 [js的ajax读取本地txt文件](https://root-lucas.github.io/Code-Examples/Javascript/js的ajax读取本地txt文件.html)
