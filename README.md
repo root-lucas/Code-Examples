@@ -30,6 +30,14 @@
 
 [Tab标签切换新闻](https://root-lucas.github.io/Code-Examples/HTML5/Tab标签切换新闻.html)
 
+[多行文本溢出加点](https://root-lucas.github.io/Code-Examples/HTML5/多行文本溢出加点.html)
+
+[简单模拟学生档案](https://root-lucas.github.io/Code-Examples/HTML5/简单模拟学生档案.html)
+
+[简单手风琴效果](https://root-lucas.github.io/Code-Examples/HTML5/简单手风琴效果.html)
+
+[三栏布局的5种布局方法](https://root-lucas.github.io/Code-Examples/HTML5/三栏布局的5种布局方法.html)
+
 
 ## JS在线预览
 [js的ajax读取本地txt文件](https://root-lucas.github.io/Code-Examples/Javascript/js的ajax读取本地txt文件.html)
