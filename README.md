@@ -24,7 +24,7 @@
 ## HTML5在线预览
 [文字浮雕效果](https://root-lucas.github.io/Code-Examples/HTML5/文字浮雕效果.html)
 
-[HTML5-localStorage演示](https://root-lucas.github.io/Code-Examples/HTML5/HTML5-localStorage演示.html)
+[HTML5存储localStorage演示](https://root-lucas.github.io/Code-Examples/HTML5/HTML5存储localStorage演示.html)
 
 [HTML5拖拽上传及本地预览](https://root-lucas.github.io/Code-Examples/HTML5/HTML5拖拽上传及本地预览.html)
 
