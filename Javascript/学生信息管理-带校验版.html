@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生信息管理</title>
+</head>
+<body>
+<form name="myform" action="" onsubmit="return fun1()">
+<div align="center">
+<table border="1" width="60%">
+	<tr>
+		<td colspan=2 align="center" style="font-weight: bold"><h3>学生信息管理<h3></td>
+	</tr>
+	<tr>
+		<td height="39" width="463" bgcolor="#006699">
+			<font color="blue" style="font-weight: bold">学生编号：</font><input type="text" maxlength=10  value="12345678" id="sno">(8位数字)
+		</td>
+		<td height="39" width="463" bgcolor="#006699">
+			<font color="blue" style="font-weight: bold">学生名字：</font><input type="text" value="许某某" id="username">(中文) 
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#006699" height="39">
+			<font color="blue" style="font-weight:bold">邮箱地址：</font><input type="text" value="12345678@qq.com" id="email">
+		</td>
+		<td bgcolor="#006699" height="39">
+			<font color='blue' style="font-weight:bold">电话号码：</font><input type="text" value="0776-12345678" id="tel">
+		</td>
+	</tr>
+	<tr height="50" bgcolor="#006699">
+		<td colspan="2" align="center"><input type="submit" value="使用submit按钮提交表单">
+		</td>
+	</tr>
+</table>
+</div>
+</form>
+<script>
+//校验是否全由8位数字组成
+function isStudentNo(str){
+	var reg=/^[0-9]{8}$/;
+	return reg.test(str);
+}
+
+//校验中文名字
+function isChina(str){
+	var reg=/^[\u4E00-\u9FA5]{2,4}$/;  //定义验证表达式
+	return reg.test(str);     //进行验证
+}
+
+//校验邮箱
+function isEmail(str){
+	var reg=/^\w+@[a-zA-Z0-9]{2,10}(\.[a-zA-Z]{2,4})$/;
+	return reg.test(str);
+}
+
+//校验电话
+function isTelCode(str){
+	var reg=/^[0-9]{4}-[0-9]{8}$/;
+	return reg.test(str);
+}
+
+	//获取各个焦点
+	function fun1(){
+		if(!isStudentNo(document.getElementById("sno").value)){
+			alert("学生编号是8为数字组成");
+			document.getElementById("sno").focus();
+			return false;
+		}
+		if(!isChina(document.getElementById("username").value)){
+			alert("不是中文名字");
+			document.getElementById("username").focus();
+			return false;
+		}
+		if(!isEmail(document.getElementById("email").value)){
+			alert("邮箱地址有误");
+			document.getElementById("email").focus();
+			return false;
+		}
+		if(!isTelCode(document.getElementById("tel").value)){
+			alert("电话号码不对");
+			document.getElementById("tel").focus();
+			return false;
+		}
+	alert("提交表单成功")
+	return false;   // 这边设置禁止提交，实际项目需要改为 true
+	}
+</script>
+</body>
+</html>

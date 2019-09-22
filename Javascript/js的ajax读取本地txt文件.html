@@ -8,7 +8,7 @@
 <script>
 			function readTxt() {
 				var xhr = new XMLHttpRequest();
-				xhr.open("get", "read.txt", true);
+				xhr.open("get", "data/read.txt", true);
 				xhr.send();
 				xhr.onreadystatechange = function() {
 					if(xhr.readyState == 4 && xhr.status == 200) {
