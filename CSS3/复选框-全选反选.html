@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框-全选/反选</title>
+</head>
+<body>
+看书：<input type="checkbox" name="checkbox" value=1><br>
+写字：<input type="checkbox" name="checkbox"value=2><br>
+运动：<input type="checkbox" name="checkbox"value=3><br>
+玩游戏：<input type="checkbox" name="checkbox"value=4><br>
+<button onclick="opcheckboxed('checkbox', 'checkall')">全选</button>
+<button onclick="opcheckboxed('checkbox', 'uncheckall')">取消全选</button>
+<button onclick="opcheckboxed('checkbox', 'reversecheck')">反选</button>
+<!--<button onclick="allcheck()">全选/取消</button> //修正版使用-->
+<!-- <script>  //代码存在 bug，当我手动点击一个一个选中后，在点击按钮会出现无法取消操作，需要点击两次。
+	var checkAll = false;
+function allcheck(){
+	checkAll=!checkAll;
+	let inputs = document.getElementsByName("checkbox");
+	for(var i =0;i<inputs.length;i++){
+		inputs[i].checked=checkAll;
+	}
+}
+
+</script> -->
+<!-- 
+<script>  //修正版
+	var checkAll = false;
+function allcheck() {
+    let inputs = document.getElementsByName('checkbox');
+    var checkInt = 0;
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].checked) {
+            checkInt += 1;
+        }
+    }
+    if (checkInt == inputs.length) {
+        checkAll = false;
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = checkAll
+        }
+    } else {
+        checkAll = true;
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = checkAll
+        }
+    }
+}
+</script>
+-->
+
+<script>
+	function opcheckboxed(obj,type){
+		var list=document.getElementsByName(obj);
+		if(list!=null){
+			for(var i=0;i<list.length;i++){
+				if(list[i].checked==true){
+					if(type!='checkall'){
+						list[i].checked=false;
+					}
+				}else{
+				if(type!='uncheckall'){
+					list[i].checked=true;
+				}
+			}
+			}
+		}
+	}
+</script>
+</body>
+</html>
