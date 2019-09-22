@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+    <meta charset="utf-8">  
+    <title>HTML5存储localStorage演示2</title>  
+</head>  
+<body>  
+    <div style="border: 2px dashed #ccc;width:320px;text-align:center;">     
+      <label for="sitename">网址名:</label>
+      <input type="text" id="sitename">
+      <br>
+      <label for="siteurl">网站地址:</label>
+      <input type="text" id="siteurl">
+      <br>
+      <button onclick="save()">新增记录</button>
+      <br>
+      <hr>
+      <label for="searchurl">输入网站名:</label>
+      <input type="text" id="searchurl">
+      <br>
+      <button onclick="find()">查找网站</button>
+      <br>
+      <br>
+      <div id="result"></div>
+      <br>
+    </div>
+<br>
+  
+    <div id="list">
+    </div>
+<script>
+  loadAll();
+  //保存记录
+    function save(){
+      var sitename=document.getElementById("sitename").value;
+      var siteurl=document.getElementById("siteurl").value;
+      localStorage.setItem(sitename,siteurl);
+      alert("添加成功");
+      loadAll();
+    }
+    //查找记录
+    function find(){
+      var finda = document.getElementById("searchurl").value;
+      var findb = localStorage.getItem(finda);
+      var findc = document.getElementById("result");
+      findc.innerHTML=finda+"网址是什么？"+findb;
+    }
+function loadAll(){
+      var list = document.getElementById("list");
+      if(localStorage.length>0){
+        var result="<table border=1>";
+        result+="<tr><td>键</td><td>值</td><td>操作</td></tr>";
+        for(var i=0;localStorage.length>i;i++){
+          var sitename=localStorage.key(i);
+          var siteurl = localStorage.getItem(sitename);
+          result+="<tr>"+
+          "<td>"+sitename+"</td>"+
+          "<td>"+siteurl+"</td>"+
+          "<td><input type=button value=删除 onclick=del("+"'"+sitename+"'"+") /></td>"+"</tr>"
+        }
+        result+="</table>";
+        getContext()
+        list.innerHTML=result;
+      }else{
+        list.innerHTML = "数据为空......";
+      }
+}
+
+    //删除数据
+function del(name){
+  localStorage.removeItem(name);
+  alert("成功删除");
+  loadAll();
+}
+</script>
+</body>  
+</html>
