@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5实现来回拖放图片</title>
+	<style type="text/css">
+		div{
+			width:400px;
+			height: 300px;
+			border:1px solid red;
+			margin-bottom:10px;
+		}
+	</style>
+	<script type="text/javascript">
+		function allDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("text1",ev.target.id)
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("text1");
+			ev.target.append(document.getElementById(data));
+		}
+	</script>
+</head>
+<body style="margin: 20px">
+	<div id="drag2" ondragover="allDrop(event)" ondrop="drop(event)"></div>
+	<img src="images/pretty.jpg" height="150" width="150" id="drag1" ondragstart="drag(event)" draggable="true">
+	<div id="div2" ondrop="drop(event)" ondragover="allDrop(event)"></div>
+	<p>Tip:可以自由拖放图片进俩个方框</p>
+</body>
+</html>
