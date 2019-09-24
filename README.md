@@ -43,8 +43,9 @@
 
 [自动打字延迟动画效果](https://root-lucas.github.io/Code-Examples/CSS3/自动打字延迟动画效果.html) 
 
+[快捷导航页面](https://root-lucas.github.io/Code-Examples/CSS3/快捷导航页面.html)
 
-
+[下载进度条](https://root-lucas.github.io/Code-Examples/CSS3/下载进度条.html)
 
 ---
 
@@ -74,7 +75,7 @@
 
 [三栏布局的5种布局方法](https://root-lucas.github.io/Code-Examples/HTML5/三栏布局的5种布局方法.html)
 
-
+[HTML5调用百度地图API进行地理定位](https://root-lucas.github.io/Code-Examples/HTML5/HTML5调用百度地图API进行地理定位.html)
 
 ---
 
