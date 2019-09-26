@@ -83,4 +83,8 @@
 
 [js的ajax读取本地txt文件](https://root-lucas.github.io/Code-Examples/Javascript/js的ajax读取本地txt文件.html)
 
+[ES6语法实现交通红绿灯](https://root-lucas.github.io/Code-Examples/Javascript/ES6语法实现交通红绿灯.html)
+
+[省市两级级联下拉列表](https://root-lucas.github.io/Code-Examples/Javascript/省市两级级联下拉列表.html)
+
 [responseXML](https://root-lucas.github.io/Code-Examples/Javascript/responseXML.html)
