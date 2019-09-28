@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>抢车位动画</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+		*{ padding:0px; margin:0px; }
+		body{ 
+			background:#D5DEE7; 
+		}
+		.boxgrid{ 
+			width: 720px; 
+			height: 701px; 
+			border: solid 2px #8399AF; 
+		}
+		.boxgrid img.car{ 
+			position: absolute;/*ÉèÖÃ¾ø¶Ô¶¨Î»*/  
+			top: 300px; 
+			left:720px;
+		}
+		.btn{
+				position: absolute;
+				left: 10px;
+				top: 20px;
+		}
+		.btn button{
+			display:block;
+			margin-top:10px;
+			padding:4px 12px;
+			color:#fff;
+			background:red;
+			border-radius:5px;
+			border-color:blue;
+		}
+		.btn button:hover{
+			background-color:brown;
+		}
+		</style>
+	<script src="data/jquery.js"></script>
+	<script>
+	      $(document).ready(function () {
+        $("#enter").click(function(){
+			$(".car").animate({top:'0px'},{duration:2000});
+        	$(".car").animate({left:'0px'},{duration:1000});
+        });
+        $("#leave").click(function(){
+        	$(".car").animate({left:'720px'},{duration:1000});
+			$(".car").animate({top:'200px'},{duration:2000});
+        })
+      });
+	</script>
+</head>
+<body>
+	<div class="boxgrid">
+		<img class="car" src="images/car.png"/>
+		<img src="images/carport.png"/>
+	</div>
+	<div class="btn">
+		<button id="enter">进入</button>
+		<button id="leave">离开</button>
+	</div>
+</body>
+</html>
