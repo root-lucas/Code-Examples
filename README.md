@@ -94,7 +94,9 @@
 
 [简单的jsonp跨域](https://root-lucas.github.io/Code-Examples/Javascript/简单的jsonp跨域.html)
 
-[Jsonp跨域交互后台PHP](https://root-lucas.github.io/Code-Examples/Javascript/Jsonp跨域交互后台PHP.html)
+[jsonp跨域交互后台PHP](https://root-lucas.github.io/Code-Examples/Javascript/jsonp跨域交互后台PHP.html)
+
+[jsonp跨域百度搜索下拉提示](https://root-lucas.github.io/Code-Examples/Javascript/jsonp跨域百度搜索下拉提示.html)
 
 ## Canvas绘图
 
