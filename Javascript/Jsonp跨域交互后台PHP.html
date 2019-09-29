@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jsonp跨域交互后台PHP</title>
+		<script>
+		function fn1(data){
+			var oUl1 = document.getElementById('ul1');
+			let html='';
+			for(var i =0;i<data.length;i++){
+				html+='<li>'+data[i]+'</li>';
+			}
+			oUl1.innerHTML=html;
+		}
+
+
+		function fn2(data){
+			var oUl2 = document.getElementById('ul2');
+			let html='';
+			for(var i =0;i<data.length;i++){
+				html+='<li>'+data[i]+'</li>';
+			}
+			oUl2.innerHTML=html;
+		}
+
+
+		function fn3(data){
+			var oUl3 = document.getElementById('ul3');
+			let html='';
+			for(var i =0;i<data.length;i++){
+				html+='<li>'+data[i]+'</li>';
+			}
+			oUl3.innerHTML=html;
+		}
+	</script>
+	
+	<!-- <script src="2.txt"></script> -->
+		<script>
+		window.onload = function(){
+			var oBtn1 = document.getElementById("btn1");
+			var oBtn2 = document.getElementById("btn2");
+			var oBtn3 = document.getElementById("btn3");
+			oBtn1.onclick=function(){
+				//当按钮点击的时候再去加载远程资源，让他执行
+
+				var oScript = document.createElement('script');
+				oScript.src = 'data/Jsonp跨域交互后台PHP.php?callbackg=fn1';
+				document.body.appendChild(oScript)
+			}
+
+			oBtn2.onclick=function(){
+				//当按钮点击的时候再去加载远程资源，让他执行
+
+				var oScript = document.createElement('script');
+				oScript.src = 'data/Jsonp跨域交互后台PHP.php?t=str&callbackg=fn2';
+				document.body.appendChild(oScript)
+			}
+
+			oBtn3.onclick=function(){
+				//当按钮点击的时候再去加载远程资源，让他执行
+
+				var oScript = document.createElement('script');
+				oScript.src = 'data/Jsonp跨域交互后台PHP.php?callbackg=fn3';
+				document.body.appendChild(oScript)
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<input type="submit" value="加载数字" id="btn1">
+	<input type="submit" value="加载字母" id="btn2">
+	<input type="submit" value="加载字幕" id="btn3">
+	<ul id='ul1'></ul>
+	<ul id='ul2'></ul>
+	<ul id="ul3"></ul>
+<!-- /*
+JSONP:JSONP with Padding
+	1.script标签
+	2.用script标签加载资源是没有跨域问题的
+
+	在资源加载进来之前定义好一个函数，这个函数接收一个参数（数据），函数里面利用这个参数左一些事情。
+	然后需要的时候通过被加载进来的时候，就会去执行我们前面定义好的函数，并且把数据当作这个函数的参数传入。
+
+
+*/ -->
+</body>
+</html>
