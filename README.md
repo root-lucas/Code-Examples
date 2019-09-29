@@ -86,7 +86,7 @@
 
 [学生信息管理-带校验版](https://root-lucas.github.io/Code-Examples/Javascript/学生信息管理-带校验版.html)
 
-[js实现极简Vue.js双向数据绑定](https://root-lucas.github.io/Code-Examples/Javascript/js实现极简Vue.js双向数据绑定.html)
+[js实现极简Vue.js双向数据绑定](https://root-lucas.github.io/Code-Examples/Javascript/js实现极简Vue双向数据绑定.html)
 
 [js的ajax读取本地txt文件](https://root-lucas.github.io/Code-Examples/Javascript/js的ajax读取本地txt文件.html)
 
@@ -100,8 +100,9 @@
 
 [Jsonp跨域交互后台PHP](https://root-lucas.github.io/Code-Examples/Javascript/Jsonp跨域交互后台PHP.html)
 
-[百度搜索下拉提示](https://root-lucas.github.io/Code-Examples/Javascript/百度搜索下拉提示.html)
+[jsonp百度搜索下拉提示](https://root-lucas.github.io/Code-Examples/Javascript/百度搜索下拉提示.html)
 
+[跨域jsonp爬取豆瓣书库](https://root-lucas.github.io/Code-Examples/Javascript/跨域jsonp爬取豆瓣书库.html)
 
 --- 
 

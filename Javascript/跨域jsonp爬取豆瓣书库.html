@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨域jsonp爬取豆瓣书库</title>
+	<style>
+        #list  {
+            display: none;
+        }
+
+        #list dl{
+            border-bottom: 1px dotted darkgoldenrod;
+        }
+
+        #list dl:last-child{
+            border-bottom: none;
+        }
+
+        #page{
+            display: none;
+            padding-bottom: 70px;
+        }
+
+        #page li{
+            float: left;
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        #page li a{
+            padding: 5px 10px;
+            border: 1px solid #bf6900;
+            margin-right: 5px;
+            text-decoration: none;
+            line-height:2em;
+        }
+
+        #page li a:hover,#page li .active{
+            background-color: #bf6900;
+            color: white;
+        }
+
+        #page li a:active{
+            background-color: #bf6900;
+        }
+    </style>
+<script>
+
+        //回调函数，用于对数据的处理，必须全局
+        function fn1(data) {
+            var oMsg = document.getElementById('msg');
+            var oList = document.getElementById('list');
+
+
+            //搜索结果-标题
+            oMsg.innerHTML = data.title.$t + ':'+ data['opensearch:totalResults'].$t;
+
+            //搜索结果-内容
+            var aEntry = data.entry;
+            var html = '';
+            for(var i=0;i<aEntry.length;i++){
+                html+='<dl><dt>'+aEntry[i].title.$t+'</dt><dd><img src="'+aEntry[i].link[2]["@href"] +'" alt="没有图片或者请求出错" /></dd></dl>';
+            }
+            oList.innerHTML = html;
+            oList.style.display = 'block';
+
+
+            //页码生成
+            var oLis='';
+            var oPages = data['opensearch:totalResults'].$t/10;
+            var oWd = document.getElementById('wd');
+            var oPage = document.getElementById('page');
+
+            for(var j =0 ;j<oPages ;j++){
+                oLis += '<li><a id="'+j+'" onclick="fn2(this.id)">'+(j+1)+'</a></li>';
+//                var oLi = document.createElement('li');
+//                var oA =document.createElement('a');
+//                oA.innerHTML = j+1;
+//                oA[j].onclick = fn2(this.id);
+//                oLi.appendChild(oA);
+//                oPage.appendChild(oLi);
+            }
+            oPage.innerHTML = oLis;
+            oPage.style.display = 'block';
+
+        }
+
+
+
+        //点击页码，展示对应内容
+        function fn2(obj){
+            var oWd = document.getElementById('wd');
+
+            if (oWd.value!=''){
+                var oScript = document.createElement('script');
+                oScript.src = 'http://api.douban.com/book/subjects?apikey=0df993c66c0c636e29ecbb5344252a4a&q='+oWd.value+'&alt=xd&callback=fn1&start-index='+(obj+1)+'&max-results=10';
+                document.body.appendChild(oScript);
+            }
+        }
+
+
+        //等待DOM完全加载完毕
+        window.onload = function () {
+
+            var oWd = document.getElementById('wd');
+            var oBtn = document.getElementById('btn');
+
+            //点击搜索按钮，触发jsonP跨域请求
+            oBtn.onclick = function () {
+                if (oWd.value!=''){
+                    var oScript = document.createElement('script');
+                    oScript.src = 'http://api.douban.com/book/subjects?apikey=0df993c66c0c636e29ecbb5344252a4a&q='+oWd.value+'&alt=xd&callback=fn1';
+                    document.body.appendChild(oScript);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="wd" autofocus>
+
+<input type="button" value="搜索豆瓣书库" id="btn"> 
+<span style="margin-left:10px"><span style="color:red;font-weight:bold;">Tip:</span>若搜索请求不到图片,可右键查看网页源代码然后复制代码到本地本件用浏览器打开</span>
+    
+<p id="msg"></p>
+    
+<hr>
+
+<div id="list"></div>
+ 
+<ul id="page"></ul>
+</body>
+</html>
