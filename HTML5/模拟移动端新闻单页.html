@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta>
+	<title>移动端新闻主页</title>
+	<style>
+		*{margin: 0;padding: 0;list-style-type: none;font-size: 30px;}
+		.clearafter:after{
+			display: block;
+			content: "";
+			clear: both;
+			height: 0;
+		}
+		.header{
+			width: 100%;
+			height: 3rem;
+			background: red;
+			padding-left: 30px;
+		}
+		.nav-item{
+			float: left;
+			margin-left: 50px;
+			margin-right: 50px;
+			color:#FFF;
+			font-size: 1rem;
+			line-height: 3rem;
+		}
+		.nav-item:nth-child(2){font-size:1.2rem;font-weight: bold;}
+
+		/*大图*/
+		.banner-content{
+			position:relative;
+    		overflow:hidden;
+    		height:0;
+    		padding-bottom:118%;  /*图片高度除以宽度得到的百分比*/
+    		opacity: 0.8
+		}
+		.banner{
+			width:100%;
+		}
+		.banner-title{
+			font-size: 2rem;
+			color: green;
+			font-weight: bold;
+			position: absolute;
+			bottom: 20px;
+			left: 40px;
+		}
+		
+		/*新闻*/
+		.news-item{
+			width: 100%;
+			/*height:100px;*/
+			padding-left:15px;
+		}
+		.item-inner{
+			border-bottom: 2px solid #e5e5e5;
+			overflow: hidden;
+			padding-bottom: 20px;
+			position: relative;
+		}
+
+		.news-img{
+			float: left;
+			display: block;
+			width: 180px;
+			height: 180px;
+			padding-right: 20px; /*只能在设置，下p标签设置会无效*/
+			margin-top:10px;
+		}
+		.news-title{
+			color:#404040;
+			font-size: 1.1rem;
+			margin-top: 20px;
+		}
+		.time{
+			position: absolute;
+			color:#888;
+			font-size: 0.9rem;
+			bottom: 20px;
+		}
+		.num{
+			position: absolute;
+			right:10px; 
+			font-size:0.9rem;
+			color:#888;
+			bottom: 20px;
+		}
+		.num:before{
+			position: absolute;
+			left: -40px;
+			top:-5px;
+			content: '  '; 
+			width: 40px;	/*这个因为使base64编码固定了的与通过content充当内容的所以图片宽高更改不了*/
+			height: 40px;
+			background-size: contain;
+			display: block;
+			background:url("images/mobile-news-book.png") no-repeat;
+		}
+		html{background-color: #f8f8f8;}
+	</style>
+</head>
+<body>
+		<div class="container">
+			<div class="header">
+				<ul>
+					<li class="nav-item">推荐</li>
+					<li class="nav-item">新闻</li>
+					<li class="nav-item">娱乐</li>
+					<li class="nav-item">体育</li>
+					<li class="nav-item">图片</li>
+					<li class="nav-item">财经</li>
+				</ul>
+			</div>
+			<div class="banner-content">
+				<img class="banner" src="images/mobile-news-header.jpg" alt="sport" />
+				<p class="banner-title">2019网易时尚跨界盛典</p>
+			</div>
+			<div class="news-content">
+				<ul>
+					<li class="news-item">
+						<div class="item-inner clearafter">
+							<img class="news-img" src="images/mobile-news-avatar.jpg" alt="header-picture">
+							<p class="news-title">为什么那么多的白人会认为中国女孩是easy girl？</p>
+							<span class="time">1小时前</span>
+							<span class="num">浏览99次</span>
+						</div>
+					</li>
+					<li class="news-item">
+						<div class="item-inner clearafter">
+							<img class="news-img" src="images/mobile-news-avatar.jpg" alt="header-picture">
+							<p class="news-title">为什么那么多的白人会认为中国女孩是easy girl？</p>
+							<span class="time">6小时前</span>
+							<span class="num">浏览199次</span>
+						</div>
+					</li>
+					<li class="news-item">
+						<div class="item-inner clearafter">
+							<img class="news-img" src="images/mobile-news-avatar.jpg" alt="header-picture">
+							<p class="news-title">为什么那么多的白人会认为中国女孩是easy girl？</p>
+							<span class="time">2小时前</span>
+							<span class="num">浏览235次</span>
+						</div>
+					</li>
+					<li class="news-item">
+						<div class="item-inner clearafter">
+							<img class="news-img" src="images/mobile-news-avatar.jpg" alt="header-picture">
+							<p class="news-title">为什么那么多的白人会认为中国女孩是easy girl？</p>
+							<span class="time">4小时前</span>
+							<span class="num">浏览539次</span>
+						</div>
+					</li>
+					<li class="news-item">
+						<div class="item-inner clearafter">
+							<img class="news-img" src="images/mobile-news-avatar.jpg" alt="header-picture">
+							<p class="news-title">为什么那么多的白人会认为中国女孩是easy girl？</p>
+							<span class="time">18小时前</span>
+							<span class="num">浏览192次</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer"></div>
+		</div>
+</body>
+</html>

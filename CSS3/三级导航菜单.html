@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三级导航菜单</title>
+	<style>
+		/*初始化*/
+		*{margin: 0;padding: 0;list-style-type: none;}
+		/*先设置一张背景图*/
+		.wallpaper{
+			width:80%;
+			height: 1500px;
+			background: grey;
+			margin:0 auto;
+		}
+		/*定位导航菜单位置*/
+		.left-navigative{
+			width:160px;
+			height: auto;
+			position: absolute;
+			top:50%;
+			left:10px;
+		}
+		/*一级菜单*/
+		.list-1-li{
+			width: 160px;
+			line-height: 40px;
+			border-bottom: 1px dashed #FFF;
+			text-align: center;
+			color:#FFF;
+			background: brown;
+		}
+		/*隐藏和显示*/
+		.list-1-li:nth-child(2) .list-2{display: none;}
+		.list-1-li:nth-child(2) .list-2-li:nth-child(3) .list-3{display: none;}
+		
+		
+		.list-1-li:nth-child(2):hover .list-2{display: block;}
+		.list-1-li:nth-child(2) .list-2-li:nth-child(3):hover .list-3{display: block;}
+
+		/*二级菜单*/
+		.list-2-li{
+			width: 160px;
+			height: auto;   /*行高继承*/
+			background:#228B22;
+			border-bottom: 1px solid #000;
+			position: relative;
+		}
+		/*三级菜单*/
+		.list-3{
+			width: 160px;
+			position: absolute;     /*水平对齐和行高继承*/
+			left: 160px;
+			top:0px;
+		}
+		.list-3 .list-3-li{
+			border-bottom: 1px dotted red;
+			background: blue;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="wallpaper">
+		<div class="left-navigative">
+				<ul class="list-1">
+					<li class="list-1-li">一级栏目1</li>
+					<li class="list-1-li">
+						<div class="title-2" style="background: #868686">一级栏目2</div>
+						<ul class="list-2">
+							<li class="list-2-li">二级栏目1</li>
+							<li class="list-2-li">二级栏目2</li>
+							<li class="list-2-li">
+									<div class="title-3" style="background: #868686;">二级栏目3</div>
+									<ul class="list-3">
+										<li class="list-3-li">三级菜单1</li>
+										<li class="list-3-li">三级菜单2</li>
+										<li class="list-3-li">三级菜单3</li>
+										<li class="list-3-li">三级菜单4</li>
+									</ul>
+							</li>
+							<li class="list-2-li">二级栏目4</li>
+						</ul>
+					</li>
+					<li class="list-1-li">一级栏目3</li>
+					<li class="list-1-li">一级栏目4</li>
+					<li class="list-1-li">一级栏目5</li>
+				</ul>
+		</div>
+	</div>
+</body>
+</html>
