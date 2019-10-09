@@ -115,6 +115,8 @@
 
 [箭头](https://root-lucas.github.io/Code-Examples/Canvas/箭头.html)
 
+[三角函数](https://root-lucas.github.io/Code-Examples/Canvas/三角函数.html)
+
 ---
 
 ## Jquery
