@@ -116,6 +116,9 @@
 [筋斗云](https://root-lucas.github.io/Code-Examples/Javascript/筋斗云.html)
 
 [匀速运动的停止条件](https://root-lucas.github.io/Code-Examples/Javascript/匀速运动的停止条件.html)
+
+[缓动运动动画](https://root-lucas.github.io/Code-Examples/Javascript/缓动运动动画.html)
+
 --- 
 
 ## Canvas绘图
