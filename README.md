@@ -134,6 +134,9 @@
 [移动的方块](https://root-lucas.github.io/Code-Examples/Canvas/移动的方块.html)
 
 [网格](https://root-lucas.github.io/Code-Examples/Canvas/网格.html)
+
+[绘制扇形](https://root-lucas.github.io/Code-Examples/Canvas/绘制扇形.html)
+
 ---
 
 ## jQuery
