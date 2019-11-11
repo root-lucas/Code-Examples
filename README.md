@@ -121,6 +121,8 @@
 
 [缓动运动动画](https://root-lucas.github.io/Code-Examples/Javascript/缓动运动动画.html)
 
+[淡入淡出](https://root-lucas.github.io/Code-Examples/Javascript/淡入淡出.html)
+
 --- 
 
 ## Canvas绘图
