@@ -1,6 +1,8 @@
 ##这是一些小效果demo
 >附带在线阅览效果
+
 ---
+
 ## CSS在线预览  
 
 [3D导航菜单](https://root-lucas.github.io/Code-Examples/CSS3/3D导航菜单.html)
@@ -113,7 +115,7 @@
 
 [分享到](https://root-lucas.github.io/Code-Examples/Javascript/分享到.html)
 
-[确认倒计时](https://root-lucas.github.io/Code-Examples/Javascript/分享到确认倒计时)
+[确认倒计时](https://root-lucas.github.io/Code-Examples/Javascript/分享到确认倒计时.html)
 
 [筋斗云](https://root-lucas.github.io/Code-Examples/Javascript/筋斗云.html)
 
@@ -139,7 +141,10 @@
 
 [绘制扇形](https://root-lucas.github.io/Code-Examples/Canvas/绘制扇形.html)
 
+[渐变](https://root-lucas.github.io/Code-Examples/渐变.html)
+
 [直线图形](https://root-lucas.github.io/Code-Examples/直线图形.html)
+
 ---
 
 ## jQuery
