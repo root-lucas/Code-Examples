@@ -141,9 +141,9 @@
 
 [绘制扇形](https://root-lucas.github.io/Code-Examples/Canvas/绘制扇形.html)
 
-[渐变](https://root-lucas.github.io/Code-Examples/渐变.html)
+[渐变](https://root-lucas.github.io/Code-Examples/Canvas/渐变.html)
 
-[直线图形](https://root-lucas.github.io/Code-Examples/直线图形.html)
+[直线图形](https://root-lucas.github.io/Code-Examples/Canvas/直线图形.html)
 
 ---
 
