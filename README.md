@@ -69,6 +69,8 @@
 
 [HTML5实现来回拖放图片](https://root-lucas.github.io/Code-Examples/HTML5/HTML5实现来回拖放图片.html)
 
+[HTML5实现来回拖放图片2](https://root-lucas.github.io/Code-Examples/HTML5/HTML5实现来回拖放图片2.html)
+
 [Tab标签切换新闻1](https://root-lucas.github.io/Code-Examples/HTML5/Tab标签切换新闻.html)
 
 [Tab标签切换新闻2](https://root-lucas.github.io/Code-Examples/HTML5/Tab标签切换新闻2.html)
@@ -125,7 +127,7 @@
 
 [淡入淡出](https://root-lucas.github.io/Code-Examples/Javascript/淡入淡出.html)
 
---- 
+---
 
 ## Canvas绘图
 
@@ -146,7 +148,6 @@
 [直线图形](https://root-lucas.github.io/Code-Examples/Canvas/直线图形.html)
 
 [旋转3D](https://root-lucas.github.io/Code-Examples/Canvas/rotate3D.html)
-
 
 ---
 
