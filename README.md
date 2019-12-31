@@ -71,6 +71,8 @@
 
 [HTML5实现来回拖放图片2](https://root-lucas.github.io/Code-Examples/HTML5/HTML5实现来回拖放图片2.html)
 
+[HTML5烟花特效](https://root-lucas.github.io/Code-Examples/HTML5/HTML5烟花特效.html)
+
 [Tab标签切换新闻1](https://root-lucas.github.io/Code-Examples/HTML5/Tab标签切换新闻.html)
 
 [Tab标签切换新闻2](https://root-lucas.github.io/Code-Examples/HTML5/Tab标签切换新闻2.html)
