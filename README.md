@@ -47,8 +47,6 @@
 
 [快捷导航页面](https://root-lucas.github.io/Code-Examples/CSS3/快捷导航页面.html)
 
-[下载进度条](https://root-lucas.github.io/Code-Examples/CSS3/下载进度条.html)
-
 [抢车位动画](https://root-lucas.github.io/Code-Examples/CSS3/抢车位动画.html)
 
 [三级导航菜单](https://root-lucas.github.io/Code-Examples/CSS3/三级导航菜单.html)
@@ -98,6 +96,8 @@
 [学生信息管理-带校验版](https://root-lucas.github.io/Code-Examples/Javascript/学生信息管理-带校验版.html)
 
 [js实现极简Vue.js双向数据绑定](https://root-lucas.github.io/Code-Examples/Javascript/js实现极简Vue双向数据绑定.html)
+
+[JavaScript百分比进度条](https://root-lucas.github.io/Code-Examples/Javascript/JavaScript百分比进度条.html)
 
 [js的ajax读取本地txt文件](https://root-lucas.github.io/Code-Examples/Javascript/js的ajax读取本地txt文件.html)
 
