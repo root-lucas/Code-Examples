@@ -159,7 +159,7 @@
 
 ## jQuery
 
-[jquery实现五星评分](https://root-lucas.github.io/Code-Examples/jQuery/jquery实现五星评分.html)
+[jquery实现五星评分](https://root-lucas.github.io/Code-Examples/Jquery/jquery实现五星评分.html)
 
-[生成表格](https://root-lucas.github.io/Code-Examples/jQuery/生成表格.html)
+[生成表格](https://root-lucas.github.io/Code-Examples/Jquery/生成表格.html)
 
