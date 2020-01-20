@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>点击canvas图片下载至本地</title>
+<h2>点击图片下载</h2>
+<a download="saveCanvas"">
+	<canvas id="myCanvas" width="200" height="100"style="border:1px solid #000000;">
+	</canvas>
+</a>
+<script>
+	var c=document.getElementById("myCanvas");
+      var ctx=c.getContext("2d");
+      ctx.fillStyle="#FF0000";
+      ctx.fillRect(0,0,150,75);
+      dataURL=c.toDataURL("image/jpeg");      // 图片默认png格式
+      var aTag = document.getElementsByTagName('a')[0];
+      aTag.href=dataURL;       
+      console.log(dataURL);   //画布里的图案转变成base64编码格式
+</script>
+</body>
+</html>
+

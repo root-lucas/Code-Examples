@@ -155,6 +155,8 @@
 
 [旋转3D](https://root-lucas.github.io/Code-Examples/Canvas/rotate3D.html)
 
+[点击canvas图片下载至本地](https://root-lucas.github.io/Code-Examples/Canvas/点击canvas图片下载至本地.html)
+
 ---
 
 ## jQuery
