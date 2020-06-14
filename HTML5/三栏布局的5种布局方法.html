@@ -26,18 +26,16 @@
         .container2 .right{right: 0;}
 
         /* 3.flex box解决方案 */
-        .container3{display: flex;}
-        .container3 div{min-height: 100px;}
+        .container3{display: flex; width: 100%; min-height: 100px;}
         .container3 .left,
         .container3 .right{width: 300px;background: #ccc;}
         .container3 .center{flex: 1;background: palegreen}
 
         /* 4.表格table解决方案 */
-        .container4{display: table;width: 100%;min-height: 100px;}
-        .container4 div{display: table-cell;}
+        .container4{display: table; width: 100%; min-height: 100px;}
         .container4 .left,
-        .container4 .right{width: 300px;background: #ccc;}
-        .container4 .center{background: palegreen;}
+        .container4 .right{display: table-cell; width: 300px; background: #ccc;}
+        .container4 .center{display: table-cell; background: palegreen;}
 
         /* 5.CSS Grid方案 */
         .container5{
