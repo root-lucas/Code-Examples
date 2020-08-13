@@ -104,6 +104,8 @@
 
 [ES6语法实现交通红绿灯](https://root-lucas.github.io/Code-Examples/Javascript/ES6语法实现交通红绿灯.html)
 
+[promise实现红绿黄灯](https://root-lucas.github.io/Code-Examples/Javascript/promise实现红绿黄灯.html)
+
 [省市两级级联下拉列表](https://root-lucas.github.io/Code-Examples/Javascript/省市两级级联下拉列表.html)
 
 [responseXML](https://root-lucas.github.io/Code-Examples/Javascript/responseXML.html)
