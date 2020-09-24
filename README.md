@@ -55,6 +55,7 @@
 
 ## HTML5在线预览
 
+[实现多媒体生成Blob对象链接](https://root-lucas.github.io/Code-Examples/HTML5/实现多媒体生成Blob对象链接.html)
 
 [文字浮雕效果](https://root-lucas.github.io/Code-Examples/HTML5/文字浮雕效果.html)
 

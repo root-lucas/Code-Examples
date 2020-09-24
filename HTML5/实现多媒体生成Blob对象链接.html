@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实现多媒体生成Blob对象链接</title>
+</head>
+<body>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<div style='width:400px;float:left;margin-right:100px;'>
+  <h2>使视频生成Blob链接</h2>
+  <video width="400" height="400" controls="controls">
+  </video>
+  <div style='text-align:center'>
+	<input type="file" id='video' accept="video/*" value='选择视频文件'/>
+  </div>
+</div>
+
+<div style='width:400px;float:left; margin-right:100px;'>
+  <h2>使图片生成Blob链接</h2>
+  <img width="400" height="400">
+  </img>
+  <div style='text-align:center'>
+	<input type="file" id='img' accept="image/*" multiple="multiple" />
+  </div>
+</div>
+
+<div style='width:400px;float:left;'>
+  <h2>使声音生成Blob链接</h2>
+  <audio controls="controls" style='width:400px;height:400px;border:1px solid #ccc'>
+  </audio>
+  <div style='text-align:center'>
+	<input type="file" id='audio' accept="audio/*" multiple="multiple" />
+  </div>
+</div>
+
+<script type="text/javascript">
+// 1.使视频生成Blob链接
+$("#video").change(function(){
+
+  var files = this.files;
+
+  if(!files.length) {
+    return;
+  }
+  console.log('video file info = ',files[0])
+  console.log('video blob link = ',window.URL.createObjectURL(files[0]))
+  $("video").attr("src", window.URL.createObjectURL(files[0]));
+
+  $("video").get(0).play();
+
+});
+
+// 2.使图片生成Blob链接
+$("#img").change(function(){
+
+  var files = this.files;
+  console.log('image file info = ',files)
+  console.log('image blob link = ',window.URL.createObjectURL(files[0]))
+  if(!files.length) {
+	  return;
+  }
+  var fr = new FileReader();
+  fr.readAsDataURL(files[0],'UTF-8');
+	
+  fr.onloadend = function(e) {  
+		// console.log(fr.result)  // 64base编码
+  };
+  $("img").attr("src", window.URL.createObjectURL(files[0]));
+
+});
+
+// 3.使声音生成Blob链接
+$('#audio').change(function(){
+	var files = this.files;
+	console.log('this audio = ',files)
+	console.log('image blob link = ',window.URL.createObjectURL(files[0]))
+	if(!files.length) {
+	  return;
+	}
+	$("audio").attr("src", window.URL.createObjectURL(files[0]));
+})
+
+</script>
+</body>
+</html>
