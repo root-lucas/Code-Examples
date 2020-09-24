@@ -95,6 +95,8 @@
 
 ## JS在线预览
 
+[js实现延迟输出文字效果](https://root-lucas.github.io/Code-Examples/Javascript/js实现延迟打字效果.html)
+
 [学生信息管理-带校验版](https://root-lucas.github.io/Code-Examples/Javascript/学生信息管理-带校验版.html)
 
 [js实现极简Vue.js双向数据绑定](https://root-lucas.github.io/Code-Examples/Javascript/js实现极简Vue双向数据绑定.html)
